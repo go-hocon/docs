@@ -518,12 +518,15 @@
 
 
 <h1 id="why-pure-go">Why pure Go<a class="headerlink" href="#why-pure-go" title="Permanent link">&para;</a></h1>
-<p>go-hocon is part of the <strong>pure-Go Puppet stack</strong> — a family of engines
-(alongside <a href="https://github.com/go-facter">go-facter</a>,
-<a href="https://github.com/go-hiera">go-hiera</a>, <a href="https://github.com/go-pcore">go-pcore</a>
-and <a href="https://github.com/go-puppet">go-puppet</a>) that provide Puppet-ecosystem
-capabilities as ordinary Go libraries, with <strong><code>CGO_ENABLED=0</code></strong> and no runtime
-dependency on Ruby or on a C toolchain.</p>
+<p>go-hocon is one of a family of pure-Go config/data-format engines (alongside
+<a href="https://github.com/go-eyaml">go-eyaml</a> and <a href="https://github.com/go-augeas">go-augeas</a>,
+which do belong to the Puppet ecosystem) that provide a well-known format as
+an ordinary Go library, with <strong><code>CGO_ENABLED=0</code></strong> and no runtime dependency on
+a JVM or a C toolchain. HOCON itself is Lightbend/Typesafe Config's format,
+unrelated to Puppet — go-hocon is validated against the reference
+<a href="https://github.com/puppetlabs/ruby-hocon"><code>puppetlabs/ruby-hocon</code></a> gem
+(itself a faithful Ruby port of Typesafe Config), not against anything in the
+Puppet language/runtime stack.</p>
 <h2 id="static-portable-embeddable">Static, portable, embeddable<a class="headerlink" href="#static-portable-embeddable" title="Permanent link">&para;</a></h2>
 <p>Because it is pure Go and imports the Go standard library only, go-hocon compiles with cgo disabled,
 cross-compiles to every 64-bit Go target (amd64, arm64, riscv64, loong64, ppc64le, s390x) and to WebAssembly, and links
