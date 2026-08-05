@@ -19,7 +19,7 @@ if err != nil { /* typed parse / resolve error */ }
 name, _ := cfg.GetString("app.name")     // "checkout"
 n,   _  := cfg.GetInt("app.workers")     // 4
 d,   _  := cfg.GetDuration("app.timeout")// 30 * time.Second
-b,   _  := cfg.GetBytes("app.max-size")  // 8388608
+b,   _  := cfg.GetBytes("app.max-size")  // 8000000 (SI "MB"; use "MiB" for 8388608)
 fmt.Print(cfg.Render(hocon.RenderOptions{}))
 ```
 
