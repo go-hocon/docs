@@ -1,11 +1,14 @@
 # Why pure Go
 
-go-hocon is part of the **pure-Go Puppet stack** — a family of engines
-(alongside [go-facter](https://github.com/go-facter),
-[go-hiera](https://github.com/go-hiera), [go-pcore](https://github.com/go-pcore)
-and [go-puppet](https://github.com/go-puppet)) that provide Puppet-ecosystem
-capabilities as ordinary Go libraries, with **`CGO_ENABLED=0`** and no runtime
-dependency on Ruby or on a C toolchain.
+go-hocon is one of a family of pure-Go config/data-format engines (alongside
+[go-eyaml](https://github.com/go-eyaml) and [go-augeas](https://github.com/go-augeas),
+which do belong to the Puppet ecosystem) that provide a well-known format as
+an ordinary Go library, with **`CGO_ENABLED=0`** and no runtime dependency on
+a JVM or a C toolchain. HOCON itself is Lightbend/Typesafe Config's format,
+unrelated to Puppet — go-hocon is validated against the reference
+[`puppetlabs/ruby-hocon`](https://github.com/puppetlabs/ruby-hocon) gem
+(itself a faithful Ruby port of Typesafe Config), not against anything in the
+Puppet language/runtime stack.
 
 ## Static, portable, embeddable
 
